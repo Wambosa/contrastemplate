@@ -1,0 +1,78 @@
+{
+  "problemStatement": "ask ravi",
+
+  "requirements": [
+    {"category": "User Experience", "name": "support", "importance": 1},
+    {"category": "User Experience", "name": "dashboard", "importance": 1},
+    {"category": "User Experience", "name": "reporting", "importance": 1},
+    {"category": "User Experience", "name": "outlook", "importance": 1},
+
+    {"category": "Technology", "name": "On-Premise", "importance": 1},
+    {"category": "Technology", "name": "Scale-able", "importance": 1},
+    {"category": "Technology", "name": "Fault Tolerant", "importance": 1},
+    {"category": "Technology", "name": ".NET support", "importance": 1},
+    {"category": "Technology", "name": "Multi-Environment", "importance": 1},
+    {"category": "Technology", "name": "Mobile Support", "importance": 1},
+
+    {"category": "Extensibility", "name": "Open Source", "importance": 1},
+    {"category": "Extensibility", "name": "Customization Time", "importance": 1},
+    {"category": "Extensibility", "name": "Scanner Integration", "importance": 1},
+
+    {"category": "Maturity", "name": "Simplistic", "importance": 1},
+    {"category": "Maturity", "name": "Aged", "importance": 1},
+    {"category": "Maturity", "name": "Testimony", "importance": 1},
+    {"category": "Maturity", "name": "Documentation", "importance": 1},
+    {"category": "Maturity", "name": "Community", "importance": 0.85},
+
+    {"category": "Compliance", "name": "PCI", "importance": 1, "bot": ["PCI", "DSS", "compliant"]},
+    {"category": "Compliance", "name": "Auditing", "importance": 1},
+    {"category": "Compliance", "name": "Encryption", "importance": 1},
+    {"category": "Compliance", "name": "DoD 5015.2", "importance": 1},
+
+    {"category": "Development", "name": "Recent Activity", "importance": 1},
+    {"category": "Development", "name": "Low Learning Curve", "importance": 0.55},
+    {"category": "Development", "name": "Toolchain Simplicity", "importance": 0.75},
+    {"category": "Development", "name": "Good Resources", "importance": 1},
+    {"category": "Development", "name": "Customization Time", "importance": 0.65}
+  ],
+
+  "solutions": [
+    {
+      "name": "Lexis Nexus Bridger",
+      "grades": [
+        {"category": "User Experience", "name": "support", "grade": 1, "src": "https://bridgerinsight.custhelp.com/app/utils/login_form/"},
+        {"category": "User Experience", "name": "dashboard", "grade": 1, "src": "https://youtu.be/WYuTNRsgvPY?t=36"},
+        {"category": "User Experience", "name": "reporting", "grade": 1, "src": "http://textlab.io/doc/13439/lexisnexis%C2%AE-bridger-insight%C2%AE-xg"},
+        {"category": "User Experience", "name": "outlook", "grade": 0},
+
+        {"category": "Technology", "name": "On-Premise", "grade": 0, "src": "https://www.tracesmart.co.uk/products/bridger-insight-xg"},
+        {"category": "Technology", "name": "Scale-able", "grade": 1},
+        {"category": "Technology", "name": "Fault Tolerant", "grade": 1},
+        {"category": "Technology", "name": ".NET support", "grade": 1, "src": "https://azure.microsoft.com/en-us/marketplace/partners/lexisnexis/lexisnexisbridgerinsightclientservices/"},
+        {"category": "Technology", "name": "Multi-Environment", "grade": 0},
+        {"category": "Technology", "name": "Mobile Support", "grade": 0},
+
+        {"category": "Extensibility", "name": "Open Source", "grade": 0},
+        {"category": "Extensibility", "name": "Customization Time", "grade": 1},
+        {"category": "Extensibility", "name": "Scanner Integration", "grade": 0},
+
+        {"category": "Maturity", "name": "Simplistic", "grade": 1},
+        {"category": "Maturity", "name": "Aged", "grade": 1, "src": "https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=lexisnexis+start+date"},
+        {"category": "Maturity", "name": "Testimony", "grade": 1, "src": "http://www.lexisnexis.com/risk/customer-success/"},
+        {"category": "Maturity", "name": "Documentation", "grade": 1, "src": "https://bridgerinsight.custhelp.com/"},
+        {"category": "Maturity", "name": "Community", "grade": 1},
+
+        {"category": "Compliance", "name": "PCI", "grade": 1},
+        {"category": "Compliance", "name": "Auditing", "grade": 1},
+        {"category": "Compliance", "name": "Encryption", "grade": 1},
+        {"category": "Compliance", "name": "DoD 5015.2", "grade": 0},
+
+        {"category": "Development", "name": "Recent Activity", "grade": 0},
+        {"category": "Development", "name": "Low Learning Curve", "grade": 0},
+        {"category": "Development", "name": "Toolchain Simplicity", "grade": 0},
+        {"category": "Development", "name": "Good Resources", "grade": 0},
+        {"category": "Development", "name": "Customization Time", "grade": 0}
+      ]
+    }
+  ]
+}

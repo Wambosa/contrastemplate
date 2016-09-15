@@ -11,7 +11,21 @@
     {"category": "Functionality", "name": "Batch import", "importance": 0.9},
     {"category": "Functionality", "name": "metadata support", "importance": 1},
     {"category": "Functionality", "name": "export images", "importance": 1},
-    {"category": "Functionality", "name": "image preview", "importance": 0.65}
+    {"category": "Functionality", "name": "image preview", "importance": 0.65},
+
+    {"category": "Compliance", "name": "Auditing", "importance": 1},
+    {"category": "Compliance", "name": "Archive Ability", "importance": 1},
+    {"category": "Compliance", "name": "Permissions", "importance": 1},
+    {"category": "Compliance", "name": "Encryption", "importance": 1},
+
+    {"category": "Development", "name": "recent activity", "importance": 1},
+    {"category": "Development", "name": "community", "importance": 0.85},
+    {"category": "Development", "name": "mature technology", "importance": 0.9},
+    {"category": "Development", "name": "low learning curve", "importance": 0.55},
+    {"category": "Development", "name": "toolchain simplicity", "importance": 0.75},
+    {"category": "Development", "name": "documentation", "importance": 1},
+    {"category": "Development", "name": "open source", "importance": 0.15},
+    {"category": "Development", "name": "customization time", "importance": 0.65}
   ],
 
   "solutions":[
@@ -27,7 +41,50 @@
         {"category": "Functionality", "name": "Batch import", "grade": 0.1},
         {"category": "Functionality", "name": "metadata support", "grade": 1},
         {"category": "Functionality", "name": "export images", "grade": 1},
-        {"category": "Functionality", "name": "image preview", "grade": 1}
+        {"category": "Functionality", "name": "image preview", "grade": 1},
+
+        {"category": "Compliance", "name": "Auditing", "grade": 1},
+        {"category": "Compliance", "name": "Archive Ability", "grade": 0.5},
+        {"category": "Compliance", "name": "Permissions", "grade": 1},
+        {"category": "Compliance", "name": "Encryption", "grade": 0},
+
+        {"category": "Development", "name": "recent activity", "grade": 1},
+        {"category": "Development", "name": "community", "grade": 1},
+        {"category": "Development", "name": "mature technology", "grade": 1},
+        {"category": "Development", "name": "low learning curve", "grade": 0.7},
+        {"category": "Development", "name": "toolchain simplicity", "grade": 1},
+        {"category": "Development", "name": "documentation", "grade": 0.5},
+        {"category": "Development", "name": "open source", "grade": 1},
+        {"category": "Development", "name": "customization time", "grade": 0.5}
+      ]
+    },
+    {
+      "name": "OrangeFs+Mongo",
+      "grades": [
+        {"category": "Architecture", "name": "Integration", "grade": 1},
+        {"category": "Architecture", "name": "On-Premise", "grade": 1},
+        {"category": "Architecture", "name": "Failover", "grade": 0.5},
+        {"category": "Architecture", "name": "Scalable/Flexible", "grade": 1},
+        {"category": "Architecture", "name": "storage footprint", "grade": 1},
+
+        {"category": "Functionality", "name": "Batch import", "grade": 1},
+        {"category": "Functionality", "name": "metadata support", "grade": 1},
+        {"category": "Functionality", "name": "export images", "grade": 1},
+        {"category": "Functionality", "name": "image preview", "grade": 0},
+
+        {"category": "Compliance", "name": "Auditing", "grade": 0},
+        {"category": "Compliance", "name": "Archive Ability", "grade": 0},
+        {"category": "Compliance", "name": "Permissions", "grade": 1},
+        {"category": "Compliance", "name": "Encryption", "grade": 0.5},
+
+        {"category": "Development", "name": "recent activity", "grade": 1},
+        {"category": "Development", "name": "community", "grade": 0.05},
+        {"category": "Development", "name": "mature technology", "grade": 1},
+        {"category": "Development", "name": "low learning curve", "grade": 0.1},
+        {"category": "Development", "name": "toolchain simplicity", "grade": 0.2},
+        {"category": "Development", "name": "documentation", "grade": 1},
+        {"category": "Development", "name": "open source", "grade": 1},
+        {"category": "Development", "name": "customization time", "grade": 0.1}
       ]
     },
     {
@@ -42,7 +99,21 @@
         {"category": "Functionality", "name": "Batch import", "grade": 0.25},
         {"category": "Functionality", "name": "metadata support", "grade": 0.6},
         {"category": "Functionality", "name": "export images", "grade": 1},
-        {"category": "Functionality", "name": "image preview", "grade": 0}
+        {"category": "Functionality", "name": "image preview", "grade": 0},
+
+        {"category": "Compliance", "name": "Auditing", "grade": 0.8},
+        {"category": "Compliance", "name": "Archive Ability", "grade": 1},
+        {"category": "Compliance", "name": "Permissions", "grade": 1},
+        {"category": "Compliance", "name": "Encryption", "grade": 1},
+
+        {"category": "Development", "name": "recent activity", "grade": 1},
+        {"category": "Development", "name": "community", "grade": 1},
+        {"category": "Development", "name": "mature technology", "grade": 1},
+        {"category": "Development", "name": "low learning curve", "grade": 1},
+        {"category": "Development", "name": "toolchain simplicity", "grade": 1},
+        {"category": "Development", "name": "documentation", "grade": 1},
+        {"category": "Development", "name": "open source", "grade": 1},
+        {"category": "Development", "name": "customization time", "grade": 1}
       ]
     }
   ]

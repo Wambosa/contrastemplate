@@ -4,32 +4,50 @@ google.charts.load('current', {'packages':['corechart']});
 // Set a callback to run when the Google Visualization API is loaded.
 google.charts.setOnLoadCallback(main);
 
-
 function main() {
+
+    var softColors = [
+        '#f1595f', // red
+        '#79c36a', // green
+        '#599ad3', // blue
+        '#f9a65a', // orange
+        '#9e66ab',
+        '#cd7058',
+        '#d77fb3',
+        '#727272' // gray
+    ];
 
     acquireData()
         .then(function(data){
 
             document.getElementById("title").innerText = data.problemStatement;
 
+            var primaryDiv = createDiv("summary_chart");
+
+
+
             unique(data.requirements, "category").forEach(function(categoryName){
 
-                var element = document.body.appendChild(document.createElement('div'));
-                element.id = categoryName + "_chart";
+                var element = createDiv(categoryName + "_chart");
 
-                // convert the data from human interpretable to graph consumable
                 var table = simpleTable(data, categoryName);
+
+                var baseColor = softColors.shift();
+                var colors = [];
+                for(var i=0; i<table[0].length;i++)
+                    colors.push(shadeColor2(baseColor, 0.11*i));
 
                 var options_stacked = {
                     title: categoryName,
                     isStacked: true,
-                    height: 500,
+                    height: 300,
                     legend: {position: 'top', maxLines: 3},
-                    vAxis: {minValue: 0}
+                    vAxis: {minValue: 0},
+                    colors: colors
                 };
 
                 drawChart(
-                    'ColumnChart',
+                    'BarChart',
                     element.id,
                     options_stacked,
                     table
@@ -45,6 +63,7 @@ function main() {
 
 function simpleTable(json, category){
     /*
+        convert the data from human interpretable to graph consumable
         expecting a problem_solution.json document
         {
             problemStatement: string,
