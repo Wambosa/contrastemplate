@@ -11,7 +11,6 @@
     {"category": "Functionality", "name": "Batch import", "importance": 0.9},
     {"category": "Functionality", "name": "metadata support", "importance": 1},
     {"category": "Functionality", "name": "export images", "importance": 1},
-    {"category": "Functionality", "name": "image preview", "importance": 0.65},
 
     {"category": "Compliance", "name": "Auditing", "importance": 1},
     {"category": "Compliance", "name": "Archive Ability", "importance": 1},
@@ -41,7 +40,6 @@
         {"category": "Functionality", "name": "Batch import", "grade": 0.1},
         {"category": "Functionality", "name": "metadata support", "grade": 1},
         {"category": "Functionality", "name": "export images", "grade": 1},
-        {"category": "Functionality", "name": "image preview", "grade": 1},
 
         {"category": "Compliance", "name": "Auditing", "grade": 1},
         {"category": "Compliance", "name": "Archive Ability", "grade": 0.5},
@@ -70,7 +68,6 @@
         {"category": "Functionality", "name": "Batch import", "grade": 1},
         {"category": "Functionality", "name": "metadata support", "grade": 1},
         {"category": "Functionality", "name": "export images", "grade": 1},
-        {"category": "Functionality", "name": "image preview", "grade": 0},
 
         {"category": "Compliance", "name": "Auditing", "grade": 0},
         {"category": "Compliance", "name": "Archive Ability", "grade": 0},
@@ -96,10 +93,9 @@
         {"category": "Architecture", "name": "Scalable/Flexible", "grade": 1},
         {"category": "Architecture", "name": "storage footprint", "grade": 1},
 
-        {"category": "Functionality", "name": "Batch import", "grade": 0.25},
+        {"category": "Functionality", "name": "Batch import", "grade": 1},
         {"category": "Functionality", "name": "metadata support", "grade": 0.6},
         {"category": "Functionality", "name": "export images", "grade": 1},
-        {"category": "Functionality", "name": "image preview", "grade": 0},
 
         {"category": "Compliance", "name": "Auditing", "grade": 0.8},
         {"category": "Compliance", "name": "Archive Ability", "grade": 1},

@@ -1,5 +1,9 @@
 # Since devs use webstorm and Visual Studio, both exclusions are a part of this project
 
+# jupyter notebook
+.ipynb_checkpoints
+
+
 # ignore jscrambler config
 .jscramblerrc
 

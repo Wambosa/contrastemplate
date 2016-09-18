@@ -34,3 +34,16 @@ function createDiv(elementId){
     element.id = elementId;
     return element;
 }
+
+function softColors(){
+    return [
+        '#f1595f', // red
+        '#79c36a', // green
+        '#599ad3', // blue
+        '#f9a65a', // orange
+        '#9e66ab',
+        '#cd7058',
+        '#d77fb3',
+        '#727272' // gray
+    ];
+}
