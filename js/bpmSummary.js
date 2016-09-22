@@ -6,12 +6,12 @@ google.charts.setOnLoadCallback(main);
 
 function main() {
 
-    getJson('data/caseManagement.json')
+    getJson('data/caseManagementRevised.json')
         .then(function(data){
 
-            document.getElementById("title").innerText = data.problemStatement;
+            new ComparisonVisualizer(data).applyBindings();
 
-            var primaryDiv = createDiv("summary_chart");
+            document.getElementById("title").innerText = data.problemStatement;
 
             var options_stacked = {
                 title: "High Level",
@@ -24,9 +24,9 @@ function main() {
 
             drawChart(
                 'BarChart',
-                primaryDiv.id,
+                "summary_chart",
                 options_stacked,
-                summarizeAll(data)
+                summarize(data)
             );
 
         })

@@ -4,11 +4,55 @@ function drawChart(chartType, divId, options, dataArray){
     chart.draw(dataTable, options);
 }
 
+
+function summarize(json){
+
+    var table = [];
+
+    var categories = json.categories && json.categories.map(function(c){return c.name;}).sort()
+        || unique(json.requirements, "category").sort();
+
+    table.push(categories.unshift("category") && categories);
+
+    var extract = extractPropertyFrom("importance", json.requirements);
+
+    json.solutions.forEach(function(solution){
+        var row = [solution.name];
+
+        categories.slice(1).forEach(function(cat){
+
+            // todo: move out of loop
+            var relevantMetric = json.requirements
+                .filter(function(req){return req.category === cat;})
+                .map(function(r){return r.name;})
+                .sort();
+
+            var relevantGrades = relevantMetric.map(function(metricName) {
+                if (solution.grades[metricName]) {
+                    return Math.min(1, solution.grades[metricName] / (extract(metricName) || 1));
+                } else{
+                    return 0;
+                }
+            });
+
+            row.push(relevantGrades.reduce(function(p, c){return p + c;})
+                / relevantGrades.length
+            );
+        });
+
+        table.push(row);
+    });
+
+    return table;
+}
+
+//old method
 function summarizeAll(json){
 
     var table = [];
 
-    var categories = unique(json.requirements, "category").sort();
+    var categories = json.categories && json.categories.map(function(c){return c.name;}).sort()
+        || unique(json.requirements, "category").sort();
 
     table.push(categories.unshift("category") && categories);
 
@@ -20,10 +64,18 @@ function summarizeAll(json){
         categories.slice(1).forEach(function(cat){
 
             var relevantGrades = solution.grades
-                .filter(function(grade){return grade.category === cat;});
+                .filter(function(grade){return grade.category === cat;})
+                .sort(function(a, b){
+                    if(a.name < b.name)
+                        return -1;
+                    if(a.name > b.name)
+                        return 1;
+
+                    return 0;
+                });
 
             row.push(relevantGrades
-                    .map(function(g){return Math.min(g.grade / extract(g.name), 1);})
+                    .map(function(g){return Math.min(g.grade / (extract(g.name)||1), 1);})
                     .reduce(function(p, c){return p + c;})
                 / relevantGrades.length
             );

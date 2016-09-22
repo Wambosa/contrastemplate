@@ -1,0 +1,502 @@
+{
+  "problemStatement": "problem statement: ask ravi",
+
+  "gradeKey": [
+    {"name": "fully meets", "min": 1, "max": 1},
+    {"name": "partially meets", "min": 0.51, "max": 0.99},
+    {"name": "half baked", "min": 0.4, "max": 0.5},
+    {"name": "does not meet", "min": 0, "max": 0.39}
+  ],
+
+  "categories": [
+    {"name": "Features", "notes": "Key Features"},
+    {"name": "Support", "notes": "Life Cycle Support"},
+    {"name": "Usability", "notes": ""},
+    {"name": "Security", "notes": "and Control"},
+    {"name": "Maintainable", "notes": "Maintainability and Manageability"},
+    {"name": "Infrastructure", "notes": "Architecture"},
+    {"name": "Interoperability", "notes": "Integrate-able and extensibility"},
+    {"name": "Cost", "notes": "Total Cost of Ownership"},
+    {"name": "Reputation", "notes": "Vendor Profile with scusa and other business. Analysts Review based on maturity and success"}
+  ],
+
+  "requirements": [
+    {
+      "category": "Features",
+      "name": "concurrent editing",
+      "notes": ["Ability for multiple users to work within the same data stream to enter information and work a task"]
+    },
+    {
+      "category": "Features",
+      "name": "ad hoc",
+      "notes": ["this solution is designed specifically for the problem we are facing"]
+    },
+    {
+      "category": "Features",
+      "name": "automatic reporting",
+      "notes": ["on a schedule"]
+    },
+    {
+      "category": "Features",
+      "name": "data wrangling",
+      "notes": ["Aggregate disparate data in a single application"]
+    },
+    {
+      "category": "Features",
+      "name": "alerts",
+      "notes": ["Time based and Event driven alerting", "email support"]
+    },
+    {
+      "category": "Features",
+      "name": "validation",
+      "notes": ["Clear and accurate data input validation"]
+    },
+    {
+      "category": "Features",
+      "name": "spend tracking",
+      "notes": ["receipt and tracking", "Spend management capture", "spend by month, q, year - tracking mechanism to a granular level to track litigation costs"]
+    },
+    {
+      "category": "Features",
+      "name": "state machine",
+      "notes": ["Create and update status ex. (discovery, trial, etc)"]
+    },
+    {
+      "category": "Features",
+      "name": "schema",
+      "notes": ["Master metadata management"]
+    },
+    {
+      "category": "Features",
+      "name": "tagging",
+      "notes": ["Ability to tag and label data is it comes in"]
+    },
+    {
+      "category": "Features",
+      "name": "workflows",
+      "notes": ["Workflow group re-assignment", "Ex. Association of matters back to other groups like complaints"]
+    },
+    {
+      "category": "Features",
+      "name": "custom objects",
+      "notes": ["logical separation of types - ex. complaints, subpoenas, litigation"]
+    },
+    {
+      "category": "Features",
+      "name": "searching",
+      "notes": ["Dynamic Search ex. Search by primary key like acct number"]
+    },
+    {
+      "category": "Features",
+      "name": "reporting",
+      "notes": ["Robust reporting mechanism", "Reporting dashboard customized by user"]
+    },
+    {
+      "category": "Features",
+      "name": "external connectors",
+      "notes": ["Original Metadata integration into third party systems", "ex. Tie into catalyst and create detail so that when it goes to catalyst the case system still has all the original meta data"]
+    },
+    {
+      "category": "Features",
+      "name": "outlook",
+      "notes": ["outlook integration", "ex. Scrape data from email and automatically insert into a case"]
+    },
+    {
+      "category": "Features",
+      "name": "events",
+      "notes": ["Integration into real time eventing systems. Ex. Cases created from real time fraud events"]
+    },
+    {
+      "category": "Support",
+      "name": "lifecycle",
+      "notes": ["provide full lifecycle support for the business process?"]
+    },
+    {
+      "category": "Support",
+      "name": "configuration",
+      "notes": ["Does it ship with accelerators that speed the configuration process?"]
+    },
+    {
+      "category": "Support",
+      "name": "UI",
+      "notes": ["Does it support various relevant views out of the box?"]
+    },
+    {
+      "category": "Support",
+      "name": "Testing",
+      "notes": ["Does it support simulation", "test or pre-prod validation environments?"]
+    },
+    {
+      "category": "Support",
+      "name": "NOC",
+      "notes": ["Does it provide monitoring and alerting?"]
+    },
+
+    {
+      "category": "Usability",
+      "name": "out-of-box",
+      "notes": ["Does it provide relevant out-of-the-box construct for business components?"]
+    },
+    {
+      "category": "Usability",
+      "name": "clarity",
+      "notes": ["Does the tool provide business process guidance—e.g., process map, or workflow?"]
+    },
+    {
+      "category": "Usability",
+      "name": "help",
+      "notes": ["Does the tool provide context-sensitive, help?"]
+    },
+    {
+      "category": "Usability",
+      "name": "documentation",
+      "notes": ["Does it provide relevant out-of-the-box templates or patterns for constructs, which can be used to jump start business projects?"]
+    },
+    {
+      "category": "Usability",
+      "name": "modeling",
+      "notes": ["Does it support visual modelling", "drag-and-drop and linking through connecting lines?", "Can business components be easily viewed, used, and re-used?", "Does it provide a way for consistently naming, versioning, organizing, and managing the business components?"]
+    },
+    {
+      "category": "Usability",
+      "name": "collaboration",
+      "notes": ["Does it support distributed, enterprise use—e.g., multi-user collaboration support?"]
+    },
+    {
+      "category": "Usability",
+      "name": "versioning",
+      "notes": ["Is use of programmatic languages within company guidelines? Does it include version control?"]
+    },
+    {
+      "category": "Usability",
+      "name": "localization",
+      "notes": ["Does the tool support globalization and/or localization?"]
+    },
+    {
+      "category": "Usability",
+      "name": "web client",
+      "notes": ["Is it accessible through a web browser?"]
+    },
+
+    {
+      "category": "Security",
+      "name": "LDAP",
+      "notes": ["Does the tool provide LDAP-based user authentication?"]
+    },
+    {
+      "category": "Security",
+      "name": "roles",
+      "notes": ["Does it support role-based authorization? Does it provide an approval workflow for separation of duties"]
+    },
+    {
+      "category": "Security",
+      "name": "audit",
+      "notes": ["Robust audit monitoring piece. Does it track and audit changes to the configuration and data?. Time based business activity monitory. Rules based identification and alerting"]
+    },
+    {
+      "category": "Security",
+      "name": "storage",
+      "notes": ["Does it handle sensitive data? NPPI file and data storage. Potentially PCI"]
+    },
+    {
+      "category": "Security",
+      "name": "PEN test",
+      "notes": ["Does it pass vulnerability assessments"]
+    },
+    {
+      "category": "Security",
+      "name": "isolation",
+      "notes": ["can separate data, and departments from each other"]
+    },
+    {
+      "category": "Security",
+      "name": "granularity",
+      "notes": ["Need to be able to configure access by role as far down as a field level"]
+    },
+
+    {
+      "category": "Maintainable",
+      "name": "capacity",
+      "notes": ["Do the tool capacity constraints meet expectation of business need?  Size of data, Number of files, Number of data entries/records?"]
+    },
+    {
+      "category": "Maintainable",
+      "name": "administration",
+      "notes": ["Does the tool provide easy-to-use mechanisms to perform administrative tasks—e.g. manage users/roles, run troubleshooting reports, run audit reports, etc?"]
+    },
+    {
+      "category": "Maintainable",
+      "name": "dev ops",
+      "notes": ["Does it provide ways to perform administrative tasks to the infrastructure stack?"]
+    },
+
+    {
+      "category": "Infrastructure",
+      "name": "database",
+      "notes": ["Does the tool function with multiple industry standard data stores (e.g., Oracle, SQL Server, etc) or is storage proprietary?"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "inter-compatible",
+      "notes": ["Are newer versions of the tool backwards-compatible?"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "centralized",
+      "notes": ["Does it allow integration and consolidation of data into a central location?"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "file size",
+      "notes": ["average file size for a document is 6 mb. other items can do as much as 4 to 8 mb per email."]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "retention",
+      "notes": ["document retention and management. Storage is needed for 7 to 10 years. compression? time to revive old files"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "migration",
+      "notes": ["Data migration from Current System ex. Sharepoint - integrate data from sharepoint and isight back between 3 and 5 years"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "scale-able",
+      "notes": ["Is the platform scaleable?"]
+    },
+
+    {
+      "category": "Interoperability",
+      "name": "custom export",
+      "notes": ["Can it create information within the tool, export them to other commonly used tools, and have the users of those tools use the information intact?"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "custom import",
+      "notes": ["Can it import Information created in other tools, and use the information intact?"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "batching",
+      "notes": ["Does it integrate with other tools via service or batch? "]
+    },
+    {
+      "category": "Interoperability",
+      "name": "REST",
+      "notes": ["Does it provide and support industry standard API’s? NO SOAP"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "standardized",
+      "notes": ["Does it use relevant industry standards—e.g., JSON, HTML, css, etc?"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "extensible",
+      "notes": ["Can the tool itself be extended or customized? How so? "]
+    },
+
+
+    {
+      "category": "Cost",
+      "name": "licensing model",
+      "notes": ["Do the available licensing models meet business expectations? SaaS, Internal, Iaas, Paas, per seat, per cpu, per core"]
+    },
+    {
+      "category": "Cost",
+      "name": "fairness",
+      "notes": ["Do the pricing schemes meet the business expectations? One time plus maintenance, monthly, yearly"]
+    },
+    {
+      "category": "Cost",
+      "name": "training",
+      "notes": ["Does a training program exist that meets expectation?"]
+    },
+    {
+      "category": "Cost",
+      "name": "overhead",
+      "notes": ["Do the necessary skill sets and number of resources required to keep the tool operational and up-to-date meet expectation?"]
+    },
+
+    {
+      "category": "Reputation",
+      "name": "certifications",
+      "notes": ["Has the tool been certified under any governing body within the business domain?ex. SSAE 16, ISO 27001, PCI DSS, ISO 9001, SOC"]
+    },
+    {
+      "category": "Reputation",
+      "name": "in use",
+      "notes": ["Existing relationship with SC. Existing relationship with SHUSA"]
+    },
+    {
+      "category": "Reputation",
+      "name": "contacts",
+      "notes": ["Can the vendor supply reference contacts for business relevant customers"]
+    },
+    {
+      "category": "Reputation",
+      "name": "specialty",
+      "notes": ["Is this the vendor's core competency? Does the vendor provide business and technology relevant professional services?"]
+    },
+    {
+      "category": "Reputation",
+      "name": "community",
+      "notes": ["Is third-party support for the tool available? Ex. TCS, forums"]
+    },
+    {
+      "category": "Reputation",
+      "name": "IT critics",
+      "notes": ["Outside IT analysis quantification? Ex. Gartner, Forrester"]
+    },
+    {
+      "category": "Reputation",
+      "name": "Business critics",
+      "notes": ["Outside Business Analysis quantification? (Business specific identified leader in ranking the feature)"]
+    }
+  ],
+
+  "solutions": [
+    {
+      "name": "Perfect Solution",
+      "grades": {
+        "concurrent editing": 1.0,
+        "ad hoc": 1.0,
+        "automatic reporting": 1,
+        "data wrangling": 1.0,
+        "alerts": 1.0,
+        "validation": 1.0,
+        "spend tracking": 1.0,
+        "state machine": 1.0,
+        "schema": 1.0,
+        "tagging": 1.0,
+        "workflows": 1.0,
+        "custom objects": 1.0,
+        "searching": 1.0,
+        "reporting": 1.0,
+        "external connectors": 1.0,
+        "outlook": 1.0,
+        "events": 1.0,
+        "lifecycle": 1.0,
+        "configuration": 1.0,
+        "UI": 1,
+        "Testing": 1.0,
+        "NOC": 1,
+        "out-of-box": 1,
+        "clarity": 1,
+        "help": 1,
+        "documentation": 1,
+        "modeling": 1.0,
+        "collaboration": 1.0,
+        "versioning": 1.0,
+        "localization": 1.0,
+        "web client": 1.0,
+        "LDAP": 1,
+        "roles": 1.0,
+        "audit": 1.0,
+        "storage": 1.0,
+        "PEN test": 1,
+        "granularity": 1.0,
+        "isolation": 1.0,
+        "capacity": 1.0,
+        "administration": 1.0,
+        "dev ops": 1,
+        "database": 1.0,
+        "inter-compatible": 1.0,
+        "centralized": 1.0,
+        "file size": 1.0,
+        "retention": 1.0,
+        "migration": 1,
+        "scale-able": 1.0,
+        "custom export": 1,
+        "custom import": 1,
+        "batching": 1,
+        "REST": 1.0,
+        "standardized": 1,
+        "extensible": 1,
+        "licensing model": 1.0,
+        "fairness": 1.0,
+        "training": 1,
+        "overhead": 1.0,
+        "certifications": 1.0,
+        "in use": 1.0,
+        "contacts": 1.0,
+        "specialty": 1.0,
+        "community": 1,
+        "IT critics": 1,
+        "Business critics": 1
+      }
+    },
+    {
+      "name": "Nuxeo",
+      "grades": {
+        "concurrent editing": 1.0,
+        "ad hoc": 1.0,
+        "automatic reporting": 0.0,
+        "data wrangling": 1.0,
+        "alerts": 1.0,
+        "validation": 1.0,
+        "spend tracking": 0.0,
+        "state machine": 1.0,
+        "schema": 1.0,
+        "tagging": 1.0,
+        "workflows": 1.0,
+        "custom objects": 1.0,
+        "searching": 1.0,
+        "reporting": 1.0,
+        "external connectors": 0.0,
+        "outlook": 0.0,
+        "events": 1.0,
+        "lifecycle": 1.0,
+        "configuration": 1.0,
+        "UI": 0.5,
+        "Testing": 1.0,
+        "NOC": 0.0,
+        "out-of-box": 0.3,
+        "clarity": 0.5,
+        "help": 0.0,
+        "documentation": 0.5,
+        "modeling": 1.0,
+        "collaboration": 1.0,
+        "versioning": 1.0,
+        "localization": 1.0,
+        "web client": 1.0,
+        "LDAP": 0.0,
+        "roles": 1.0,
+        "audit": 1.0,
+        "storage": 1.0,
+        "PEN test": 0.0,
+        "isolation": 0.5,
+        "granularity": 1.0,
+        "capacity": 1.0,
+        "administration": 1.0,
+        "dev ops": 0.5,
+        "database": 1.0,
+        "inter-compatible": 1.0,
+        "centralized": 1.0,
+        "file size": 1.0,
+        "retention": 1.0,
+        "migration": 0.5,
+        "scale-able": 1.0,
+        "custom export": 0.7,
+        "custom import": 0.5,
+        "batching": 0.2,
+        "REST": 1.0,
+        "standardized": 0.5,
+        "extensible": 0.5,
+        "licensing model": 1.0,
+        "fairness": 1.0,
+        "training": 0.5,
+        "overhead": 0.0,
+        "certifications": 0.0,
+        "in use": 0.0,
+        "contacts": 0.0,
+        "specialty": 1.0,
+        "community": 0.5,
+        "IT critics": 0.0,
+        "Business critics": 0.0
+      }
+    }
+
+  ]
+}

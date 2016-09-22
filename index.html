@@ -1,23 +1,47 @@
 <html>
 <head>
-    <!--Load the AJAX API-->
+    <!--google charts-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!--knockout-->
+    <script type="text/javascript" src="js/lib/knockout-3.4.0.js"></script>
+
+    <!--custom-->
+    <link rel="stylesheet" href="css/site.css">
     <script type="text/javascript" src="js/_util.js"></script>
     <script type="text/javascript" src="js/_getJson.js"></script>
     <script type="text/javascript" src="js/_chartHelper.js"></script>
+    <script type="text/javascript" src="js/view/ComparisonVisualizer.js"></script>
+
+    <!--bootstrap 4-->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/lib/tether.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 </head>
 
 <!--main-->
-<script type="text/javascript" src="js/horizontalScaling.js"></script>
+<script type="text/javascript" src="js/bpmSummary.js"></script>
 
 <body>
 
 <h1 id="title"></h1>
 
-<div id="custom_chart"></div>
+<div id="summary_chart" class="chart"></div>
 
-<!--Div that will hold the chart-->
-<div id="chart_div"></div>
+<div data-bind="foreach: requirements">
+    <div class="container">
+        <div class="container-category" data-bind="text: category"></div>
+        <div class="container-header" data-bind="text: name"></div>
+        <div class="container-body">
+            <ul data-bind="foreach: { data: notes, as: 'note' }">
+                <li data-bind="text: note"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 
 </body>
 </html>

@@ -13,6 +13,18 @@ function extractPropertyFrom(property, objArray){
     };
 }
 
+function on(prop){
+    return function(a, b){
+        if(a[prop] < b[prop])
+            return -1;
+
+        if(a[prop] > b[prop])
+            return 1;
+
+        return 0;
+    }
+}
+
 function unique(array, property){
     var flags = [], output = [], l = array.length, i;
     for( i=0; i<l; i++) {
@@ -41,9 +53,10 @@ function softColors(){
         '#79c36a', // green
         '#599ad3', // blue
         '#f9a65a', // orange
-        '#9e66ab',
-        '#cd7058',
-        '#d77fb3',
-        '#727272' // gray
+        '#9e66ab', // purple
+        '#cd7058', // brown
+        '#d77fb3', // pink
+        '#727272', // gray
+        '#fae3c4' // cream yellow?
     ];
 }
