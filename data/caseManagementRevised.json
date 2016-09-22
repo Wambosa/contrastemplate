@@ -23,7 +23,7 @@
     {
       "category": "Features",
       "name": "concurrent editing",
-      "notes": ["Ability for multiple users to work within the same data stream to enter information and work a task"]
+      "notes": ["Ability for multiple users to work within the same data stream to enter information and work a task", "handling of concurrent saving issues", "warnings that someone else is looking at the 'editable'", "locking, to prevent clashes"]
     },
     {
       "category": "Features",
@@ -33,67 +33,67 @@
     {
       "category": "Features",
       "name": "automatic reporting",
-      "notes": ["on a schedule"]
+      "notes": ["on a schedule", "without human intervention", "set it and forget it"]
     },
     {
       "category": "Features",
       "name": "data wrangling",
-      "notes": ["Aggregate disparate data in a single application"]
+      "notes": ["Aggregate disparate data in a single application", "has built in techniques for formatting data. (like normalizing metric and customary measurements)", "accepts all data"]
     },
     {
       "category": "Features",
       "name": "alerts",
-      "notes": ["Time based and Event driven alerting", "email support"]
+      "notes": ["time/deadline based", "event driven alerting", "email support", "select targets"]
     },
     {
       "category": "Features",
       "name": "validation",
-      "notes": ["Clear and accurate data input validation"]
+      "notes": ["Clear and accurate data input validation", "difficult to break system due to user interaction", "is UI hardened to prevent silly user actions"]
     },
     {
       "category": "Features",
       "name": "spend tracking",
-      "notes": ["receipt and tracking", "Spend management capture", "spend by month, q, year - tracking mechanism to a granular level to track litigation costs"]
+      "notes": ["receipt and tracking", "Spend management capture", "spend by month, quarter, year", "granular level tracking mechanism in order to track litigation costs"]
     },
     {
       "category": "Features",
       "name": "state machine",
-      "notes": ["Create and update status ex. (discovery, trial, etc)"]
+      "notes": ["Create and update status", "ex. (discovery, trial, etc)", "move objects or processes along with simple status changes"]
     },
     {
       "category": "Features",
       "name": "schema",
-      "notes": ["Master metadata management"]
+      "notes": ["Master metadata management", "we can define custom metadata", "we can easily change metadata schema"]
     },
     {
       "category": "Features",
       "name": "tagging",
-      "notes": ["Ability to tag and label data is it comes in"]
+      "notes": ["Ability to tag and label data is it comes in", "attach misc text notes to a object, process, event, or document", "assign key value pairs on the fly to aforementioned without predefined schema"]
     },
     {
       "category": "Features",
       "name": "workflows",
-      "notes": ["Workflow group re-assignment", "Ex. Association of matters back to other groups like complaints"]
+      "notes": ["Workflow group re-assignment", "Ex. Association of matters back to other groups like complaints", "support for custom designed business processes"]
     },
     {
       "category": "Features",
       "name": "custom objects",
-      "notes": ["logical separation of types - ex. complaints, subpoenas, litigation"]
+      "notes": ["logical separation of types", "ex. complaints, subpoenas, litigation", "create entity with rules and/or properties", "high level visual programming flexibility"]
     },
     {
       "category": "Features",
       "name": "searching",
-      "notes": ["Dynamic Search ex. Search by primary key like acct number"]
+      "notes": ["dynamic Search", "faceted search", "search by any field/property/column", "ex. Search by primary key like acct number"]
     },
     {
       "category": "Features",
       "name": "reporting",
-      "notes": ["Robust reporting mechanism", "Reporting dashboard customized by user"]
+      "notes": ["Robust reporting mechanism", "Reporting dashboard customized by user", "simple interface for report view customization", "standard SQL language aggregation"]
     },
     {
       "category": "Features",
       "name": "external connectors",
-      "notes": ["Original Metadata integration into third party systems", "ex. Tie into catalyst and create detail so that when it goes to catalyst the case system still has all the original meta data"]
+      "notes": ["Original Metadata integration into third party systems", "ex. Tie into catalyst and create detail so that when it goes to catalyst the case system still has all the original meta data", "supported 3rd party integrations to other CRM/ECM/BPM platforms"]
     },
     {
       "category": "Features",
@@ -103,7 +103,7 @@
     {
       "category": "Features",
       "name": "events",
-      "notes": ["Integration into real time eventing systems. Ex. Cases created from real time fraud events"]
+      "notes": ["Integration into real time eventing systems", "Ex. Cases created from real time fraud events", "trigger events with API call", "flexible event trigger mechanisms such as file drop, email, api post, or 3rd party event"]
     },
     {
       "category": "Support",
@@ -185,17 +185,17 @@
     {
       "category": "Security",
       "name": "roles",
-      "notes": ["Does it support role-based authorization? Does it provide an approval workflow for separation of duties"]
+      "notes": ["Does it support role-based authorization?", "Does it provide an approval workflow for separation of duties"]
     },
     {
       "category": "Security",
       "name": "audit",
-      "notes": ["Robust audit monitoring piece. Does it track and audit changes to the configuration and data?. Time based business activity monitory. Rules based identification and alerting"]
+      "notes": ["Robust audit monitoring piece", "Does it track and audit changes to the configuration and data?", "Time based business activity monitory", "Rules based identification and alerting"]
     },
     {
       "category": "Security",
       "name": "storage",
-      "notes": ["Does it handle sensitive data? NPPI file and data storage. Potentially PCI"]
+      "notes": ["Does it handle sensitive data?", "NPPI file and data storage", "Potentially PCI"]
     },
     {
       "category": "Security",
@@ -232,121 +232,121 @@
     {
       "category": "Infrastructure",
       "name": "database",
-      "notes": ["Does the tool function with multiple industry standard data stores (e.g., Oracle, SQL Server, etc) or is storage proprietary?"]
+      "notes": ["Does the tool function with multiple industry standard data stores?", "Oracle, SQL Server, MySql, Sqlite, NoSql, etc", "is storage proprietary? (bad)"]
     },
     {
       "category": "Infrastructure",
       "name": "inter-compatible",
-      "notes": ["Are newer versions of the tool backwards-compatible?"]
+      "notes": ["Are newer versions of the tool backwards-compatible?", "does changing versions require any effort", "version up", "rollback version"]
     },
     {
       "category": "Infrastructure",
       "name": "centralized",
-      "notes": ["Does it allow integration and consolidation of data into a central location?"]
+      "notes": ["Does it allow integration and consolidation of data into a central location?", "all accessible with one portal/IP/interface/SDK", "not necessarily same physical location. more like logically centralized"]
     },
     {
       "category": "Infrastructure",
       "name": "file size",
-      "notes": ["average file size for a document is 6 mb. other items can do as much as 4 to 8 mb per email."]
+      "notes": ["average file size for a document is 6 mb", "other items can do as much as 4 to 8 mb per email", "efficient data store techniques"]
     },
     {
       "category": "Infrastructure",
       "name": "retention",
-      "notes": ["document retention and management. Storage is needed for 7 to 10 years. compression? time to revive old files"]
+      "notes": ["document retention and management", "Storage is needed for 7 to 10 years", "compression?", "time to revive old files"]
     },
     {
       "category": "Infrastructure",
       "name": "migration",
-      "notes": ["Data migration from Current System ex. Sharepoint - integrate data from sharepoint and isight back between 3 and 5 years"]
+      "notes": ["Data migration from Current System ex. Sharepoint - integrate data from sharepoint and isight back between 3 and 5 years", "is the data trapped inside? Can we get it back out in a standard format?", "can the solution accept standard data as input?"]
     },
     {
       "category": "Infrastructure",
       "name": "scale-able",
-      "notes": ["Is the platform scaleable?"]
+      "notes": ["Is the platform scaleable?", "is there downtime to scale out?", "can we scale down?", "horizontal scaling?"]
     },
 
     {
       "category": "Interoperability",
       "name": "custom export",
-      "notes": ["Can it create information within the tool, export them to other commonly used tools, and have the users of those tools use the information intact?"]
+      "notes": ["Can it create information within the tool export them to other commonly used tools, and have the users of those tools use the information intact?", "excel", "json", "xml"]
     },
     {
       "category": "Interoperability",
       "name": "custom import",
-      "notes": ["Can it import Information created in other tools, and use the information intact?"]
+      "notes": ["Can it import Information created in other tools, and use the information intact?", "excel", "json", "xml"]
     },
     {
       "category": "Interoperability",
       "name": "batching",
-      "notes": ["Does it integrate with other tools via service or batch? "]
+      "notes": ["Does it integrate with other tools via service or batch?", "for optimized batch uploading/downloading", "optimized processing large volumes of data"]
     },
     {
       "category": "Interoperability",
       "name": "REST",
-      "notes": ["Does it provide and support industry standard API’s? NO SOAP"]
+      "notes": ["Does it provide and support industry standard API’s?", "only SOAP (bad)", "is RESTFUL?"]
     },
     {
       "category": "Interoperability",
       "name": "standardized",
-      "notes": ["Does it use relevant industry standards—e.g., JSON, HTML, css, etc?"]
+      "notes": ["Does it use relevant industry standards in configurations/codebase", "JSON", "HTML", "css"]
     },
     {
       "category": "Interoperability",
       "name": "extensible",
-      "notes": ["Can the tool itself be extended or customized? How so? "]
+      "notes": ["Can the tool itself be extended or customized? How so?", "how difficult is it to extend?"]
     },
 
 
     {
       "category": "Cost",
       "name": "licensing model",
-      "notes": ["Do the available licensing models meet business expectations? SaaS, Internal, Iaas, Paas, per seat, per cpu, per core"]
+      "notes": ["Do the available licensing models meet business expectations?", "SaaS, Internal, Iaas, Paas, per seat, per cpu, per core", "are we being gouged with hidden costs?"]
     },
     {
       "category": "Cost",
       "name": "fairness",
-      "notes": ["Do the pricing schemes meet the business expectations? One time plus maintenance, monthly, yearly"]
+      "notes": ["Do the pricing schemes meet the business expectations? One time plus maintenance, monthly, yearly", "is the price clear? Or is it hidden behind a conversation wall?"]
     },
     {
       "category": "Cost",
       "name": "training",
-      "notes": ["Does a training program exist that meets expectation?"]
+      "notes": ["Does a training program exist that meets expectation?", "Is completed in a timely manner?"]
     },
     {
       "category": "Cost",
       "name": "overhead",
-      "notes": ["Do the necessary skill sets and number of resources required to keep the tool operational and up-to-date meet expectation?"]
+      "notes": ["Do the necessary skill sets and number of resources required to keep the tool operational and up-to-date meet expectation?", "How many people will it take to manage this new system?", "are we forced to outsource experts to solve problems?"]
     },
 
     {
       "category": "Reputation",
       "name": "certifications",
-      "notes": ["Has the tool been certified under any governing body within the business domain?ex. SSAE 16, ISO 27001, PCI DSS, ISO 9001, SOC"]
+      "notes": ["Has the tool been certified under any governing body within the business domain?","SSAE 16, ISO 27001, PCI DSS, ISO 9001, SOC"]
     },
     {
       "category": "Reputation",
       "name": "in use",
-      "notes": ["Existing relationship with SC. Existing relationship with SHUSA"]
+      "notes": ["Existing relationship with SC", "Existing relationship with SHUSA"]
     },
     {
       "category": "Reputation",
       "name": "contacts",
-      "notes": ["Can the vendor supply reference contacts for business relevant customers"]
+      "notes": ["Can the vendor supply reference contacts for business relevant customers", "do other real people use this as a solution"]
     },
     {
       "category": "Reputation",
       "name": "specialty",
-      "notes": ["Is this the vendor's core competency? Does the vendor provide business and technology relevant professional services?"]
+      "notes": ["Is this the vendor's core competency?", "Does the vendor provide business and technology relevant professional services?"]
     },
     {
       "category": "Reputation",
       "name": "community",
-      "notes": ["Is third-party support for the tool available? Ex. TCS, forums"]
+      "notes": ["Is third-party support for the tool available?", "forum community"]
     },
     {
       "category": "Reputation",
       "name": "IT critics",
-      "notes": ["Outside IT analysis quantification? Ex. Gartner, Forrester"]
+      "notes": ["Outside IT analysis quantification?", "Gartner, Forrester"]
     },
     {
       "category": "Reputation",
