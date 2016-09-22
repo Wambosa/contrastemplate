@@ -9,7 +9,7 @@ function main() {
     getJson('data/caseManagementRevised.json')
         .then(function(data){
 
-            new ComparisonVisualizer(data).applyBindings();
+            var vis = new ComparisonVisualizer(data).applyBindings();
 
             document.getElementById("title").innerText = data.problemStatement;
 
@@ -22,12 +22,7 @@ function main() {
                 colors: softColors()
             };
 
-            drawChart(
-                'BarChart',
-                "summary_chart",
-                options_stacked,
-                summarize(data)
-            );
+            vis.draw(options_stacked);
 
         })
         .catch(console.error);

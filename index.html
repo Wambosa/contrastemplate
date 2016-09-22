@@ -29,11 +29,41 @@
 
 <div id="summary_chart" class="chart"></div>
 
+<br>
+<br>
+
+<h3>Legend</h3>
+<div id="legend" class="legendBox">
+    <div class="container-category">category</div>
+
+    <div class="container-header">
+        <span>short term</span>
+        <span>
+            <span class="leaderBoardItem tag tag-pill tag-default"> i fully meet</span>
+        </span>
+    </div>
+
+    <div class="container-body">
+        <ul>
+            <li>definition of short term</li>
+            <li>potential examples of term</li>
+        </ul>
+    </div>
+</div>
+
+
 <div data-bind="foreach: requirements">
     <div class="container">
-        <div class="container-category" data-bind="text: category"></div>
-        <div class="container-header" data-bind="text: name"></div>
-        <div class="container-body">
+        <div class="container-category" data-bind="text: category, style: { backgroundColor: categoryColor, color: textColor}"></div>
+
+        <div class="container-header" data-bind="style: { backgroundColor: headerColor, color: textColor}">
+            <span data-bind="text: name"></span>
+            <span data-bind="foreach: leaderBoard">
+                <span class="leaderBoardItem tag tag-pill tag-default" data-bind="text: name"></span>
+            </span>
+        </div>
+
+        <div class="container-body" data-bind="style: { backgroundColor: bodyColor, color: textColor}">
             <ul data-bind="foreach: { data: notes, as: 'note' }">
                 <li data-bind="text: note"></li>
             </ul>

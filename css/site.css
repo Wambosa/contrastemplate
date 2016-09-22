@@ -11,6 +11,10 @@
     margin: 0 auto;
 }
 
+h3 {
+    text-align: center;
+}
+
 .container {
     margin: 1em;
 }
@@ -25,7 +29,7 @@
     border-radius: .25rem;
     text-align: center;
     font-weight: bold;
-    color: gray;
+    color: whitesmoke;
 }
 
 .container-header {
@@ -37,7 +41,7 @@
     border-radius: .25rem;
     font-size: x-large;
     font-weight: bold;
-    color: gray;
+    color: whitesmoke;
 }
 
 .container-body {
@@ -45,6 +49,32 @@
     background-color: #957bbe;
     border-radius: .25rem;
     font-weight: bold;
-    color: lightgrey;
+    color: whitesmoke;
 }
 
+.leaderBoardItem {
+    float:right;
+}
+
+.legendBox {
+    transform: scale(0.7);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    min-height: 157px;
+}
+
+.legendBox .container-category {
+    background-color: #fae3c4;
+    color: black;
+}
+
+.legendBox .container-header {
+    background-color: #fdf1e2;
+    color: black;
+}
+
+.legendBox .container-body {
+    background-color: #fdf4e7;
+    color: black;
+}

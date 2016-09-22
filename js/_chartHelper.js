@@ -4,6 +4,11 @@ function drawChart(chartType, divId, options, dataArray){
     chart.draw(dataTable, options);
 }
 
+function relevantMetrics(requirements, category){
+    return requirements
+        .filter(function(req){return req.category === category;})
+        .map(function(r){return r.name;});
+}
 
 function summarize(json){
 

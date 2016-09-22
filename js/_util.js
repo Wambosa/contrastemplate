@@ -13,7 +13,19 @@ function extractPropertyFrom(property, objArray){
     };
 }
 
-function on(prop){
+function on(prop, reverse){
+
+    if(reverse)
+        return function(a, b){
+            if(a[prop] > b[prop])
+                return -1;
+
+            if(a[prop] < b[prop])
+                return 1;
+
+            return 0;
+        };
+
     return function(a, b){
         if(a[prop] < b[prop])
             return -1;
@@ -57,6 +69,32 @@ function softColors(){
         '#cd7058', // brown
         '#d77fb3', // pink
         '#727272', // gray
-        '#fae3c4' // cream yellow?
+        '#fae3c4', // cream yellow?
+        '#daeeff' // light blue
     ];
+}
+
+function textColors(asDictionary){
+
+    var textCol = [
+        '#f5f5f5', // whitesmoke
+        '#191919', // black
+        '#f5f5f5', // whitesmoke
+        '#191919', // black
+        '#f5f5f5', // whitesmoke
+        '#f5f5f5', // whitesmoke
+        '#f5f5f5', // whitesmoke
+        '#f5f5f5', // whitesmoke
+        '#191919' // black
+    ];
+
+    if(asDictionary){
+        var dict = {};
+        softColors().forEach(function(col){
+            dict[col] = textCol.shift();
+        });
+        return dict;
+    }
+
+    return textCol
 }
