@@ -1,5 +1,5 @@
 {
-  "problemStatement": "problem statement: ask ravi",
+  "problemStatement": "Time to market for form driven solutions is taking more than 90 days",
 
   "gradeKey": [
     {"name": "fully meets", "min": 1, "max": 1},
@@ -8,18 +8,45 @@
   ],
 
   "categories": [
-    {"name": "Features", "notes": "Key Features"},
-    {"name": "Support", "notes": "Life Cycle Support"},
-    {"name": "Usability", "notes": ""},
-    {"name": "Security", "notes": "and Control"},
-    {"name": "Maintainable", "notes": "Maintainability and Manageability"},
-    {"name": "Infrastructure", "notes": "Architecture"},
-    {"name": "Interoperability", "notes": "Integrate-able and extensibility"},
-    {"name": "Cost", "notes": "Total Cost of Ownership"},
-    {"name": "Reputation", "notes": "Vendor Profile with scusa and other business. Analysts Review based on maturity and success"}
+    {"name": "Cost", "weight": 1.8, "notes": "Total Cost of Ownership"},
+    {"name": "Features", "weight": 1.5, "notes": "Key Features"},
+    {"name": "Security", "weight": 1.75, "notes": "and Control"},
+    {"name": "Usability", "weight": 1.25, "notes": ""},
+    {"name": "Maintainable", "weight": 1.25, "notes": "Maintainability and Manageability"},
+    {"name": "Interoperability", "weight": 1.4, "notes": "Integrate-able and extensibility"},
+
+    {"name": "Support", "weight": 1.0, "notes": "Life Cycle Support"},
+    {"name": "Infrastructure", "weight": 1.0, "notes": "Architecture"},
+    {"name": "Reputation", "weight": 1.0, "notes": "Vendor Profile with scusa and other business. Analysts Review based on maturity and success"}
   ],
 
   "requirements": [
+    {
+      "category": "Cost",
+      "name": "upfront",
+      "notes": ["less than $250,000"]
+    },
+    {
+      "category": "Cost",
+      "name": "licensing model",
+      "notes": ["Do the available licensing models meet business expectations?", "per seat OR no limits preferred (as opposed to per cpu/core, per server, per app)", "are we being gouged with hidden costs?"]
+    },
+    {
+      "category": "Cost",
+      "name": "fairness",
+      "notes": ["Do the pricing schemes meet the business expectations? One time plus maintenance, monthly, yearly", "is the price clear? Or is it hidden behind a conversation wall?"]
+    },
+    {
+      "category": "Cost",
+      "name": "training",
+      "notes": ["Does a training program exist that meets expectation?", "Is completed in a timely manner?"]
+    },
+    {
+      "category": "Cost",
+      "name": "overhead",
+      "notes": ["Do the necessary skill sets and number of resources required to keep the tool operational and up-to-date meet expectation?", "How many people will it take to manage this new system?", "are we forced to outsource experts to solve problems?"]
+    },
+
     {
       "category": "Features",
       "name": "concurrent editing",
@@ -43,12 +70,12 @@
     {
       "category": "Features",
       "name": "alerts",
-      "notes": ["time/deadline based", "event driven alerting", "email support", "select targets"]
+      "notes": ["time/deadline based", "event driven alerting", "email support", "select targets to receive alert (easy to change who gets it without code redeploy)"]
     },
     {
       "category": "Features",
       "name": "validation",
-      "notes": ["Clear and accurate data input validation", "difficult to break system due to user interaction", "is UI hardened to prevent silly user actions"]
+      "notes": ["Clear and accurate data input validation", "difficult to break system due to user interaction", "is UI hardened to prevent silly user actions", "back end validations?"]
     },
     {
       "category": "Features",
@@ -73,38 +100,24 @@
     {
       "category": "Features",
       "name": "workflows",
-      "notes": ["Workflow group re-assignment", "Ex. Association of matters back to other groups like complaints", "support for custom designed business processes"]
+      "notes": ["Workflow group re-assignment", "Association of matters back to other groups like complaints", "support for custom designed business processes", "asynchronous and synchronous steps", "simultaneous approvals"]
     },
     {
       "category": "Features",
       "name": "custom objects",
-      "notes": ["logical separation of types", "ex. complaints, subpoenas, litigation", "create entity with rules and/or properties", "high level visual programming flexibility"]
+      "notes": ["logical separation of types", "complaints, subpoenas, litigation", "create entity with rules and/or properties", "high level visual programming flexibility"]
     },
     {
       "category": "Features",
       "name": "searching",
-      "notes": ["dynamic Search", "faceted search", "search by any field/property/column", "ex. Search by primary key like acct number"]
+      "notes": ["dynamic Search", "faceted search", "search by any field/property/column", "Search by primary key like acct number"]
     },
     {
       "category": "Features",
       "name": "reporting",
       "notes": ["Robust reporting mechanism", "Reporting dashboard customized by user", "simple interface for report view customization", "standard SQL language aggregation"]
     },
-    {
-      "category": "Features",
-      "name": "external connectors",
-      "notes": ["Original Metadata integration into third party systems", "ex. Tie into catalyst and create detail so that when it goes to catalyst the case system still has all the original meta data", "supported 3rd party integrations to other CRM/ECM/BPM platforms"]
-    },
-    {
-      "category": "Features",
-      "name": "outlook",
-      "notes": ["outlook integration", "ex. Scrape data from email and automatically insert into a case"]
-    },
-    {
-      "category": "Features",
-      "name": "events",
-      "notes": ["Integration into real time eventing systems", "Ex. Cases created from real time fraud events", "trigger events with API call", "flexible event trigger mechanisms such as file drop, email, api post, or 3rd party event"]
-    },
+
     {
       "category": "Support",
       "name": "lifecycle",
@@ -129,52 +142,6 @@
       "category": "Support",
       "name": "NOC",
       "notes": ["Does it provide monitoring and alerting?"]
-    },
-
-    {
-      "category": "Usability",
-      "name": "out-of-box",
-      "notes": ["Does it provide relevant out-of-the-box construct for business components?"]
-    },
-    {
-      "category": "Usability",
-      "name": "clarity",
-      "notes": ["Does the tool provide business process guidance—e.g., process map, or workflow?"]
-    },
-    {
-      "category": "Usability",
-      "name": "help",
-      "notes": ["Does the tool provide context-sensitive, help?"]
-    },
-    {
-      "category": "Usability",
-      "name": "documentation",
-      "notes": ["Does it provide relevant out-of-the-box templates or patterns for constructs, which can be used to jump start business projects?"]
-    },
-    {
-      "category": "Usability",
-      "name": "modeling",
-      "notes": ["Does it support visual modelling", "drag-and-drop and linking through connecting lines?", "Can business components be easily viewed, used, and re-used?", "Does it provide a way for consistently naming, versioning, organizing, and managing the business components?"]
-    },
-    {
-      "category": "Usability",
-      "name": "collaboration",
-      "notes": ["Does it support distributed, enterprise use—e.g., multi-user collaboration support?"]
-    },
-    {
-      "category": "Usability",
-      "name": "versioning",
-      "notes": ["Is use of programmatic languages within company guidelines? Does it include version control?"]
-    },
-    {
-      "category": "Usability",
-      "name": "localization",
-      "notes": ["Does the tool support globalization and/or localization?"]
-    },
-    {
-      "category": "Usability",
-      "name": "web client",
-      "notes": ["Is it accessible through a web browser?"]
     },
 
     {
@@ -221,18 +188,43 @@
     {
       "category": "Maintainable",
       "name": "administration",
-      "notes": ["Does the tool provide easy-to-use mechanisms to perform administrative tasks—e.g. manage users/roles, run troubleshooting reports, run audit reports, etc?"]
+      "notes": ["Does the tool provide easy-to-use mechanisms to perform administrative tasks?", "manage users/roles and revoke permissions", "run troubleshooting reports and view current problems/exceptions/errors"]
+    },
+    {
+      "category": "Maintainable",
+      "name": "benchmarking",
+      "notes": ["view performance history (data exploration)", "easily visualize performance bottlenecks", "customize view/reports", "alerting provided within module"]
     },
     {
       "category": "Maintainable",
       "name": "dev ops",
       "notes": ["Does it provide ways to perform administrative tasks to the infrastructure stack?"]
     },
+    {
+      "category": "Maintainable",
+      "name": "errors",
+      "notes": ["are errors sensible?", "do not contain genral error codes without descriptions", "must point to problem child"]
+    },
+    {
+      "category": "Maintainable",
+      "name": "updating",
+      "notes": ["How often are updates pushed?", "Do updates cause downtime?", "Am I afraid to accept new versions of the solution?"]
+    },
+    {
+      "category": "Maintainable",
+      "name": "our-documentation",
+      "notes": ["How will we document the customization we build in this solution?", "is documentation generatable?", "is documentation automatically generated?"]
+    },
 
     {
       "category": "Infrastructure",
-      "name": "database",
-      "notes": ["Does the tool function with multiple industry standard data stores?", "Oracle, SQL Server, MySql, Sqlite, NoSql, etc", "is storage proprietary? (bad)"]
+      "name": "SQL",
+      "notes": ["Does the tool function with multiple industry standard data stores?", "Oracle, SQL Server, MySql, Sqlite, etc", "is storage proprietary? (bad)"]
+    },
+    {
+      "category": "Infrastructure",
+      "name": "NoSQL",
+      "notes": ["Does the tool function with multiple industry standard data stores?", "Mongo, Cassandra, etc", "is storage proprietary? (bad)"]
     },
     {
       "category": "Infrastructure",
@@ -252,12 +244,12 @@
     {
       "category": "Infrastructure",
       "name": "retention",
-      "notes": ["document retention and management", "Storage is needed for 7 to 10 years", "compression?", "time to revive old files"]
+      "notes": ["document retention and management", "Storage is needed for 7 to 10 years", "compression?", "time taken to revive old files"]
     },
     {
       "category": "Infrastructure",
       "name": "migration",
-      "notes": ["Data migration from Current System ex. Sharepoint - integrate data from sharepoint and isight back between 3 and 5 years", "is the data trapped inside? Can we get it back out in a standard format?", "can the solution accept standard data as input?"]
+      "notes": ["Data migration from Current System ex. Sharepoint - integrate data from sharepoint and isight back between 3 and 5 years", "is the data trapped inside? Can we get it back out in a standard format?", "can the solution accept standard data as input?", "Is large scale migration in/out supported by the solution?"]
     },
     {
       "category": "Infrastructure",
@@ -283,40 +275,35 @@
     {
       "category": "Interoperability",
       "name": "REST",
-      "notes": ["Does it provide and support industry standard API’s?", "only SOAP (bad)", "is RESTFUL?"]
+      "notes": ["Does it provide and support industry standard API’s?", "only SOAP or proprietary? (bad)", "is RESTFUL?"]
     },
     {
       "category": "Interoperability",
       "name": "standardized",
-      "notes": ["Does it use relevant industry standards in configurations/codebase", "JSON", "HTML", "css"]
+      "notes": ["Does it use relevant industry standards in configurations/codebase", "JSON, XML, HTML, CSS, javascript, C#, Lua", "Does not use some 'made up' programming language"]
     },
     {
       "category": "Interoperability",
       "name": "extensible",
-      "notes": ["Can the tool itself be extended or customized? How so?", "how difficult is it to extend?"]
+      "notes": ["Can the tool itself be extended or customized?", "how difficult is it to extend?", "do we have to call support because it is soo complex?"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "external connectors",
+      "notes": ["Original Metadata integration into third party systems", "Tie into catalyst and create detail so that when it goes to catalyst the case system still has all the original meta data", "supported 3rd party integrations to other CRM/ECM/BPM platforms"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "outlook",
+      "notes": ["outlook integration", "Scrape data from email and automatically insert into a case"]
+    },
+    {
+      "category": "Interoperability",
+      "name": "events",
+      "notes": ["Integration into real time eventing systems", "Cases created from real time fraud events", "trigger events with API call", "flexible event trigger mechanisms such as file drop, email, api post, or 3rd party event"]
     },
 
 
-    {
-      "category": "Cost",
-      "name": "licensing model",
-      "notes": ["Do the available licensing models meet business expectations?", "SaaS, Internal, Iaas, Paas, per seat, per cpu, per core", "are we being gouged with hidden costs?"]
-    },
-    {
-      "category": "Cost",
-      "name": "fairness",
-      "notes": ["Do the pricing schemes meet the business expectations? One time plus maintenance, monthly, yearly", "is the price clear? Or is it hidden behind a conversation wall?"]
-    },
-    {
-      "category": "Cost",
-      "name": "training",
-      "notes": ["Does a training program exist that meets expectation?", "Is completed in a timely manner?"]
-    },
-    {
-      "category": "Cost",
-      "name": "overhead",
-      "notes": ["Do the necessary skill sets and number of resources required to keep the tool operational and up-to-date meet expectation?", "How many people will it take to manage this new system?", "are we forced to outsource experts to solve problems?"]
-    },
 
     {
       "category": "Reputation",
@@ -352,13 +339,81 @@
       "category": "Reputation",
       "name": "Business critics",
       "notes": ["Outside Business Analysis quantification? (Business specific identified leader in ranking the feature)"]
+    },
+
+    {
+      "category": "Usability",
+      "name": "out-of-box",
+      "notes": ["Does it provide relevant out-of-the-box construct for business components?"]
+    },
+    {
+      "category": "Usability",
+      "name": "sane-defaults",
+      "notes": ["Does default configuration provide intuitive non-trigger settings?", "is auditing done by default on all objects/databases/configurations?", ""]
+    },
+    {
+      "category": "Usability",
+      "name": "clarity",
+      "notes": ["Does the tool provide business process guidance, process map, or workflow?", "clear wizards/WYSIWYG editors for noobish players"]
+    },
+    {
+      "category": "Usability",
+      "name": "help",
+      "notes": ["Does the tool provide context-sensitive help?", "warnings for absurd settings/configurations?"]
+    },
+    {
+      "category": "Usability",
+      "name": "documentation",
+      "notes": ["Does it provide relevant out-of-the-box templates or patterns for constructs, which can be used to jump start business projects?", "do examples work?", "is up to date"]
+    },
+    {
+      "category": "Usability",
+      "name": "modeling",
+      "notes": ["Does it support visual modelling?", "drag-and-drop and linking through connecting lines?", "Can business components be easily viewed, used, and re-used?", "Does it provide a way for consistently naming, versioning, organizing, and managing the business components?"]
+    },
+    {
+      "category": "Usability",
+      "name": "studio",
+      "notes": ["is the 'studio' tooling all in one place? (do i have to open 2+ windows & separate programs?)", "responsive and intuitive?", "easy to deploy from studio to app space", "easy to test & easy to debug problems", "simple image export of flow"]
+    },
+    {
+      "category": "Usability",
+      "name": "slugish development",
+      "notes": ["does the solution provide UIs that can swap between advanced and guided?", "offer direct editing of data structures or process flows?", "dark UI default?"]
+    },
+    {
+      "category": "Usability",
+      "name": "collaboration",
+      "notes": ["Does it support distributed, enterprise use? (multi-user collaboration support)", "familiar intuitive collaboration tools (like facebok, or twitter, or some other social tool)"]
+    },
+    {
+      "category": "Usability",
+      "name": "versioning",
+      "notes": ["Is use of programmatic versioning within company guidelines? (git)", "Does it include version control?"]
+    },
+    {
+      "category": "Usability",
+      "name": "localization",
+      "notes": ["Does the tool support globalization and/or localization?"]
+    },
+    {
+      "category": "Usability",
+      "name": "web client",
+      "notes": ["Is it accessible through a web browser?", "supports chrome and firefox?"]
+    },
+    {
+      "category": "Usability",
+      "name": "mobile client",
+      "notes": ["Is it accessible through a mobile browser/app?", "is the mobile functionality comparable to desktop versions?", "native responsive feeling website or actual native app", "small footprint and performant"]
     }
+
   ],
 
   "solutions": [
     {
       "name": "Perfect Solution",
       "grades": {
+        "upfront": 1,
         "concurrent editing": 1.0,
         "ad hoc": 1.0,
         "automatic reporting": 1,

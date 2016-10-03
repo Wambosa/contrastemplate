@@ -19,6 +19,8 @@ function ComparisonVisualizer(json) {
     this.requirements = json.requirements.sort(on('category'))
         .map(function(req){
 
+            req.name = req.name.replace(' ', '_');
+
             req.categoryColor = categoryColor[req.category];
             req.headerColor = shadeColor2(req.categoryColor, .5);
             req.bodyColor = shadeColor2(req.categoryColor, .6);
@@ -38,7 +40,21 @@ function ComparisonVisualizer(json) {
 
             return req;
     });
+
+    this.updateWeight = function(category, newVal){
+        this.categories.find(function(c){
+            return c.name == category;
+        }).weight = newVal;
+
+
+        this.draw(this.chartOptions, {
+            categories: this.categories,
+            requirements: this.inputData.requirements,
+            solutions: this.inputData.solutions
+        });
+    };
 }
+
 
 ComparisonVisualizer.prototype = {
     applyBindings: function(){
@@ -46,12 +62,12 @@ ComparisonVisualizer.prototype = {
         return this;
     },
 
-    draw: function(options) {
+    draw: function(options, newData) {
         drawChart(
             'BarChart',
             "summary_chart",
             options,
-            summarize(this.inputData)
+            summarize(newData || this.inputData)
         );
     }
 };

@@ -1,40 +1,43 @@
+var __chart = null;
+
 function drawChart(chartType, divId, options, dataArray){
     var dataTable = google.visualization.arrayToDataTable(dataArray);
-    var chart = new google.visualization[chartType](document.getElementById(divId));
-    chart.draw(dataTable, options);
+    if(!__chart)
+        __chart = new google.visualization[chartType](document.getElementById(divId));
+
+    __chart.draw(dataTable, options);
 }
 
+// todo: refactor this. loops are getting crazy
 function summarize(json){
-
     var table = [];
 
-    var categories = json.categories && json.categories.map(function(c){return c.name;}).sort()
-        || unique(json.requirements, "category").sort();
+    var categories = json.categories.map(function(c){
+        c.relevantMetrics = json.requirements
+            .filter(function(req){return req.category === c.name;})
+            .map(function(r){return {name: r.name, weight: r.weight||1};})
+            .sort(on('name'));
+        return c;
+    })
+    .sort(on('name'));
 
-    table.push(categories.unshift("category") && categories);
-
-    var extract = extractPropertyFrom("importance", json.requirements);
+    // google charts requires a very simple table header. table[0] must be an array of string values ["","",""]
+    var categoryList = categories.map(function(c){return c.name;});
+    categoryList.unshift("category");
+    table.push(categoryList);
 
     json.solutions.forEach(function(solution){
         var row = [solution.name];
 
-        categories.slice(1).forEach(function(cat){
+        categories.forEach(function(cat){
 
-            // todo: move out of loop
-            var relevantMetric = json.requirements
-                .filter(function(req){return req.category === cat;})
-                .map(function(r){return r.name;})
-                .sort();
-
-            var relevantGrades = relevantMetric.map(function(metricName) {
-                if (solution.grades[metricName]) {
-                    return Math.min(1, solution.grades[metricName] / (extract(metricName) || 1));
-                } else{
-                    return 0;
-                }
+            var relevantGrades = cat.relevantMetrics.map(function(metric) {
+                return solution.grades[metric.name] && Math.max(Math.min(1, solution.grades[metric.name]), 0) * metric.weight
+                    || 0;
             });
 
-            row.push(relevantGrades.reduce(function(p, c){return p + c;})
+            row.push(relevantGrades.reduce(sum)
+                * cat.weight
                 / relevantGrades.length
             );
         });

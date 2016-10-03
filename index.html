@@ -18,6 +18,8 @@
     <script type="text/javascript" src="js/lib/tether.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js"></script>
 </head>
 
 <!--main-->
@@ -32,46 +34,59 @@
 <br>
 <br>
 
-<h3>Legend</h3>
-<div id="legend" class="legendBox">
-    <div class="container-category">category</div>
 
-    <div class="container-header">
-        <span>short term</span>
-        <span>
-            <span class="leaderBoardItem tag tag-pill tag-default"> i fully meet</span>
-        </span>
-    </div>
-
-    <div class="container-body">
-        <ul>
-            <li>definition of short term</li>
-            <li>potential examples of term</li>
-        </ul>
-    </div>
+<div data-bind="foreach: categories">
+    <p data-bind="text: name"></p>
+    <input data-bind="attr: {'id': name +'_weight_slide'}" type="text"/>
 </div>
 
 
-<div data-bind="foreach: requirements">
-    <div class="container">
-        <div class="container-category" data-bind="text: category, style: { backgroundColor: categoryColor, color: textColor}"></div>
 
-        <div class="container-header" data-bind="style: { backgroundColor: headerColor, color: textColor}">
-            <span data-bind="text: name"></span>
-            <span data-bind="foreach: leaderBoard">
-                <span class="leaderBoardItem tag tag-pill tag-default" data-bind="text: name"></span>
-            </span>
+<a class="btn btn-primary halfMargin" data-toggle="collapse" href="#requirementList" aria-expanded="false">
+    Show Explanation
+</a>
+
+<div id="requirementList" class="collapse">
+    <h3>Legend</h3>
+    <div id="legend" class="legendBox">
+        <div class="container-category">category</div>
+
+        <div class="container-header">
+            <span>short nickname</span>
+            <span>
+            <span class="leaderBoardItem tag tag-pill tag-default">a perfect solution</span>
+        </span>
         </div>
 
-        <div class="container-body" data-bind="style: { backgroundColor: bodyColor, color: textColor}">
-            <ul data-bind="foreach: { data: notes, as: 'note' }">
-                <li data-bind="text: note"></li>
+        <div class="container-body">
+            <ul>
+                <li>definition of requirement</li>
+                <li>potential examples of requirement</li>
+                <li>instructions for objective grading</li>
             </ul>
         </div>
     </div>
+
+
+    <div data-bind="foreach: requirements">
+        <div class="container">
+            <div class="container-category" data-bind="text: category, style: { backgroundColor: categoryColor, color: textColor}"></div>
+
+            <div class="container-header" data-bind="style: { backgroundColor: headerColor, color: textColor}">
+                <span data-bind="text: name"></span>
+                <span data-bind="foreach: leaderBoard">
+                <span class="leaderBoardItem tag tag-pill tag-default" data-bind="text: name"></span>
+            </span>
+            </div>
+
+            <div class="container-body" data-bind="style: { backgroundColor: bodyColor, color: textColor}">
+                <ul data-bind="foreach: { data: notes, as: 'note' }">
+                    <li data-bind="text: note"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-
-
 
 </body>
 </html>

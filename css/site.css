@@ -19,6 +19,18 @@ h3 {
     margin: 1em;
 }
 
+.flexbox {
+    display: flex;
+}
+
+.centerflex {
+    justify-content: center;
+}
+
+.halfMargin {
+    margin-left: 44%;
+}
+
 .container-category {
     float: left;
     width: 8rem;
@@ -77,4 +89,11 @@ h3 {
 .legendBox .container-body {
     background-color: #fdf4e7;
     color: black;
+}
+
+div.slider.slider-horizontal{
+    position: relative;
+    margin-left: 25%;
+    font-size: 0.5em;
+
 }
