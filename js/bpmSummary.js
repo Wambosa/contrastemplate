@@ -29,8 +29,6 @@ function main() {
 
                     var divId = c.name + "_weight_slide";
 
-
-
                     initSlider(divId, c.weight).on("slide", function (newVal) {
                         vis.updateWeight(c.name, newVal)
                     });
@@ -45,7 +43,7 @@ function initSlider(divId, initValue){
     return new Slider("#"+divId, {
         ticks: [1, 1.25, 1.5, 1.75, 2],
         ticks_positions: [0, 25, 50, 75, 100],
-        ticks_labels: ['normal', 'important', 'very important', 'critical', 'deal breaker'],
+        ticks_labels: ['normal', 'important', 'very important', 'critical', 'very critical'],
         ticks_snap_bounds: 0.1,
         step: 0.01,
         value: initValue || 0

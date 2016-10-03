@@ -36,9 +36,8 @@ function summarize(json){
                     || 0;
             });
 
-            row.push(relevantGrades.reduce(sum)
+            row.push((relevantGrades.reduce(sum) / relevantGrades.length)
                 * cat.weight
-                / relevantGrades.length
             );
         });
 

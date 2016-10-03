@@ -19,8 +19,6 @@ function ComparisonVisualizer(json) {
     this.requirements = json.requirements.sort(on('category'))
         .map(function(req){
 
-            req.name = req.name.replace(' ', '_');
-
             req.categoryColor = categoryColor[req.category];
             req.headerColor = shadeColor2(req.categoryColor, .5);
             req.bodyColor = shadeColor2(req.categoryColor, .6);
