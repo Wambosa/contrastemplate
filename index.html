@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/view/ComparisonVisualizer.js"></script>
 
     <!--bootstrap 4-->
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/lib/tether.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
@@ -35,9 +35,11 @@
 <br>
 
 
-<div data-bind="foreach: categories">
-    <p data-bind="text: name"></p>
-    <input data-bind="attr: {'id': name +'_weight_slide'}" type="text"/>
+<div class="weight-slider-container flexbox" data-bind="foreach: categories">
+    <div class="flexbox centerflex vertical tinyMargin">
+        <p data-bind="text: name"></p>
+        <input data-bind="attr: {'id': name +'_weight_slide'}" type="text"/>
+    </div>
 </div>
 
 
@@ -52,7 +54,7 @@
         <div class="container-category">category</div>
 
         <div class="container-header">
-            <span>short nickname</span>
+            <span>metric nickname</span>
             <span>
             <span class="leaderBoardItem tag tag-pill tag-default">a perfect solution</span>
         </span>
@@ -60,9 +62,9 @@
 
         <div class="container-body">
             <ul>
-                <li>definition of requirement</li>
+                <li>how much effort does it take to achieve xyz with this solution?</li>
                 <li>potential examples of requirement</li>
-                <li>instructions for objective grading</li>
+                <li>additional descriptive information about metric</li>
             </ul>
         </div>
     </div>

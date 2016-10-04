@@ -29,18 +29,19 @@ function main() {
 
                     var divId = c.name + "_weight_slide";
 
-                    initSlider(divId, c.weight).on("slide", function (newVal) {
+                    initSlider(divId, c.weight, c.backgroundColor).on("slide", function (newVal) {
                         vis.updateWeight(c.name, newVal)
                     });
                 });
 
-            }, 800);
+            }, 100);
         })
         .catch(console.error);
 }
 
-function initSlider(divId, initValue){
-    return new Slider("#"+divId, {
+function initSlider(divId, initValue, handleColor){
+
+   var s = new Slider("#"+divId, {
         ticks: [1, 1.25, 1.5, 1.75, 2],
         ticks_positions: [0, 25, 50, 75, 100],
         ticks_labels: ['normal', 'important', 'very important', 'critical', 'very critical'],
@@ -48,4 +49,9 @@ function initSlider(divId, initValue){
         step: 0.01,
         value: initValue || 0
     });
+
+    if(handleColor)
+        s.handle1.style.background = handleColor;
+
+    return s
 }

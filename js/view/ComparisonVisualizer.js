@@ -3,15 +3,20 @@ function ComparisonVisualizer(json) {
     this.inputData = json;
 
     this.problemStatement = json.problemStatement || "missing problem statement";
-    this.categories = json.categories || ["missing 'categories' in datafile"];
     this.gradeKey = json.gradeKey || [{name: "fail", min:0, max:0}, {name: "pass", min:1, max:1}];
     this.solutions = json.solutions;
 
     var allColors = softColors();
     var categoryColor = {};
 
+
     json.categories.sort(on('name')).forEach(function(cat){
         categoryColor[cat.name] = allColors.shift();
+    });
+
+    this.categories = json.categories.map(function(cat){
+        cat.backgroundColor = categoryColor[cat.name];
+        return cat;
     });
 
     var textCol = textColors(true);
