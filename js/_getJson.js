@@ -16,19 +16,20 @@ function getJson(path, callback){
                     else resolve(data);
 
                 }catch(err){
+                    err.requestStatus = request.status;
                     if(callback) callback(errorTip("json parse failed", err));
                     else reject(errorTip("json parse failed", err));
                 }
 
             } else {
-                if(callback) callback(errorTip("json parse failed", request));
-                else reject(errorTip("json parse failed", request));
+                if(callback) callback(errorTip("GET request.status not OK", request));
+                else reject(errorTip("GET request.status not OK", request));
             }
         };
 
         request.onerror = function(err) {
-            if(callback) callback(errorTip("json parse failed", err));
-            else reject(errorTip("json parse failed", err));
+            if(callback) callback(errorTip("general http failure", err));
+            else reject(errorTip("general http failure", err));
         };
 
         request.send();

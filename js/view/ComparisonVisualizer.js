@@ -3,7 +3,6 @@ function ComparisonVisualizer(json) {
     this.inputData = json;
 
     this.problemStatement = json.problemStatement || "missing problem statement";
-    this.gradeKey = json.gradeKey || [{name: "fail", min:0, max:0}, {name: "pass", min:1, max:1}];
     this.solutions = json.solutions;
 
     var allColors = softColors();
@@ -49,30 +48,13 @@ function ComparisonVisualizer(json) {
             return c.name == category;
         }).weight = newVal;
 
-
-        this.draw(this.chartOptions, {
+        this.reDraw(summarize({
             categories: this.categories,
             requirements: this.inputData.requirements,
             solutions: this.inputData.solutions
-        });
+        }));
     };
 }
 
-
-ComparisonVisualizer.prototype = {
-    applyBindings: function(){
-        ko.applyBindings(this);
-        return this;
-    },
-
-    draw: function(options, newData) {
-        drawChart(
-            'BarChart',
-            "summary_chart",
-            options,
-            summarize(newData || this.inputData)
-        );
-    }
-};
-
+ComparisonVisualizer.prototype = Object.create(InteractiveGoogleChart.prototype);
 ComparisonVisualizer.prototype.constructor = ComparisonVisualizer;

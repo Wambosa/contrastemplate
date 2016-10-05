@@ -5,6 +5,14 @@ function errorTip(tip, e){
     }
 }
 
+function reload(e){
+    //in the case of CDN load failure
+    console.error(e);
+    window.setTimeout(function(){
+        location.reload();;
+    }, 500)
+}
+
 function extractPropertyFrom(property, objArray){
     return function(value, key){
         return objArray.find(function(obj){
@@ -61,6 +69,26 @@ function createDiv(elementId){
     return element;
 }
 
+function initSlider(divId, options){
+
+   var s = new Slider("#"+divId, {
+        ticks: options.ticks,
+        ticks_positions: options.ticks_positions,
+        ticks_labels: options.ticks_labels,
+        ticks_snap_bounds: options.ticks_snap_bounds,
+        step: options.step,
+        value: options.initValue || 0
+    });
+
+    if(options.handleColor)
+        s.handle1.style.background = options.handleColor;
+        
+    if(options.onSlide)
+        s.on("slide", options.onSlide);
+
+    return s
+}
+
 function softColors(){
     return [
         '#f1595f', // red
@@ -99,4 +127,42 @@ function textColors(asDictionary){
     }
 
     return textCol
+}
+
+function summarize(json){
+    var table = [];
+
+    var categories = json.categories.map(function(c){
+        c.relevantMetrics = json.requirements
+            .filter(function(req){return req.category === c.name;})
+            .map(function(r){return {name: r.name, weight: r.weight||1};})
+            .sort(on('name'));
+        return c;
+    })
+    .sort(on('name'));
+
+    // google charts requires a very simple table header. table[0] must be an array of string values ["","",""]
+    var categoryList = categories.map(function(c){return c.name;});
+    categoryList.unshift("category");
+    table.push(categoryList);
+
+    json.solutions.forEach(function(solution){
+        var row = [solution.name];
+
+        categories.forEach(function(cat){
+
+            var relevantGrades = cat.relevantMetrics.map(function(metric) {
+                return solution.grades[metric.name] && Math.max(Math.min(1, solution.grades[metric.name]), 0) * metric.weight
+                    || 0;
+            });
+
+            row.push((relevantGrades.reduce(sum) / relevantGrades.length)
+                * cat.weight
+            );
+        });
+
+        table.push(row);
+    });
+
+    return table;
 }
