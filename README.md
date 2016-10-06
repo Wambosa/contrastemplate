@@ -43,13 +43,13 @@ Requirements attached to a single category only to later be summed up and averag
 ```
 
 #### Solutions
-A solution is one of the things being compared. It holds **0-100** _grades_ on each requirement.
+A solution is one of the things being compared. It holds _grades_ on each requirement.
 Enabling all possible solutions to be equally compared on the same scale.
 - **name** is the display name of the solution
-- **grades** is a key-value pair (dictionary) where the key is the exact case sensitive _requirement name_
+- **grades** is a key-value pair (dictionary) where the _key_ is the **exact** case sensitive _requirement name_
 - the grade value needs to be between 0 and 1.0 (so a 70% grade would be written as 0.7)
 - omitting a requirement or mis typing the requirement name will cause that grade to be 0
-- entrering numbers higher than 1 become 1
+- entering numbers higher than 1 become 1
 - entering numbers lower than 0 become 0
 ```javascript
 "solutions": [
